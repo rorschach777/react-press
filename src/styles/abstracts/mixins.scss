@@ -1,0 +1,12 @@
+@mixin center(){
+    display: block;
+    margin: 0 auto;
+}
+@mixin flex(){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin shadow(){
+    text-shadow: 2px 2px 10px rgba(0,0,0,.3);
+}

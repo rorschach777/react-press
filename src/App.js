@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import LayoutMain from './components/Layouts/LayoutMain';
+import Hero from './components/Hero';
 import './App.css';
+import './styles/index.scss';
+import 'antd/dist/antd.css';
+import AppicationContainer from './containers/AppContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppicationContainer>
+        <LayoutMain/>
+      </AppicationContainer>
     </div>
   );
 }
