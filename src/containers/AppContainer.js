@@ -72,7 +72,6 @@ class AppContainer extends Component {
                 let _currentRoute = window.location.href;
                 let _setRoute;
                 _currentRoute = _currentRoute.replace(CONFIG.url.frontend.development, '');
-              
                 _currentRoute != "" ? _setRoute = _currentRoute : _setRoute = "home";
                 this.setState(prevState=>{
                     return {
@@ -98,26 +97,25 @@ class AppContainer extends Component {
         if (this.state !== prevState) {
           console.log(this.state);
         }
-        if (this.state.data.pages !== prevState.data.pages) {
-    
-         
-            if (this.state.data.pages !== null ){
-                this.setCurrentPageObject();
-            }
+        // If route changes update the page object
+        if (this.state.routes.currentRoute != prevState.routes.currentRoute){
+            this.setCurrentPageObject();
         }
-      }
+    }
     showState(){
         console.log(this.showState);
     }
     setCurrentPageObject(){
         let _currentPage = null;
         let _state = {...this.state}
-        _state.data.pages.forEach((cur,idx)=>{
-           if (cur.slug === this.state.routes.currentRoute){
-               console.log(`Current page : ${cur.slug}`)
-               _currentPage = {...cur}
-           }
-        })
+        if(this.state.data.pages != null){
+            _state.data.pages.forEach((cur,idx)=>{
+                if (cur.slug === this.state.routes.currentRoute){
+                    _currentPage = {...cur}
+                }
+             })
+        }
+       
        this.setState(prevState=>{
            return {
                 ...prevState,
