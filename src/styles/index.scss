@@ -1,19 +1,23 @@
+// Abstracts
 @import './abstracts/variables.scss';
 @import './abstracts/mixins.scss';
 @import './abstracts/functions.scss';
-
+// Base
 @import './base/document.scss';
 @import './base/typography.scss';
-
+// Component Library
 @import './components/react/_Menu';
 @import './components/react/_Header.scss';
 @import './components/react/_Container.scss';
 @import './components/react/_ContainerFluid.scss';
 @import './components/react/_Row.scss';
-
-
+@import './components/react/_Logo.scss';
+// Layouts
 @import './layouts/_hero.scss';
 @import './layouts/_footer.scss';
 @import './layouts/_grid';
+// Pages
+// Themes
+// Vendors
 
 

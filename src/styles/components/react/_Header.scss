@@ -1,3 +1,10 @@
-.header{
-    background-color: #ddd;
-}
+.Header{
+
+    &__inner{
+        @include flex(row, stretch);
+        @include padding($increment-sm, $increment-sm);
+    }
+
+    background-color:$color-white;
+    position: relative;
+}   

@@ -30,7 +30,6 @@ $color-gray-7: #666666;
 $color-gray-8: #E4e5E0;
 $color-gray-9: #232F39;
 $color-black: #333333;
-
 // Brand Fonts
 $font-main: Lato;
 $font-secondary: Muli;
@@ -63,6 +62,9 @@ $increment-xlg: 10rem;
 $container-width: 108rem;
 $gutter-horizontal : $increment-sm;
 $gutter-vertical: $increment-xsm;
+// Header
+$header-height: 5.5rem;
+$header-logo-width: 18rem;
 // Footer
 $pre-footer-height: 80px;
 $pre-footer-offset: calc(#{$pre-footer-height} - #{$increment-sm});

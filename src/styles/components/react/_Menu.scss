@@ -1,20 +1,14 @@
 .menu {
-    background-color: #fafafa;
-    width: 100%;
-    height: 50px;
+    @include flex(row, stretch, center);
+    width: 25%;
     ul {
+        margin-bottom:0px;
+        @include flex(row, center, center);
+        flex-basis: 100%;
         width: 100%;
-        height: inherit;
         list-style: none;
-        margin: 0px !important;
-        padding: 0px !important;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        li {
+       li {
             text-align: center !important;
             color: olive;
             list-style: inherit;
