@@ -130,7 +130,6 @@ class AppContainer extends Component {
     
     }
     setComponentData = (componentName)=>{
-       
         let components = this.state.page.currentPage.acf_fields.component;
         let dataObject = null
         components.forEach((cur, idx)=>{

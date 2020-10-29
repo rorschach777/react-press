@@ -10,3 +10,22 @@
 @mixin shadow(){
     text-shadow: 2px 2px 10px rgba(0,0,0,.3);
 }
+@mixin container($fluid : false){
+    padding: 0px;
+    @if($fluid){
+        width: 100%;
+    }
+    @else{
+        @include center;
+        width: $container-width;
+    }
+}
+
+@mixin column-base(){
+    float: left;
+    padding: $increment-xxsm;
+    box-sizing: border-box;
+    &:not(:last-child){
+        margin-right: $gutter-horizontal;
+    }
+}

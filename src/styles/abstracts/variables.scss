@@ -1,9 +1,68 @@
-$h1: 5.5rem;
+
+// Brand Colors
+$color-1: #9ea700;
+$color-2: #9ea719;
+$color-2: #9ea732;
+$color-3: #9ea74b;
+$color-4: #9ea764;
+$color-5: #110c70;
+$color-6:hsl(244, 33%, 18%);
+$color-7:#1b1C02;
+// iOS Color
+$color-ios-blue:rgb(0,122,255) ;
+$color-ios-green: rgb(48,209,88);
+$color-ios-purple: rgb(94,92,230);
+$color-ios-orange: rgb(255,159,10);
+$color-ios-pink: rgb(255,55,95);
+$color-ios-purple: rgb(191,90,242);
+$color-ios-red: rgb(255,69,58);
+$color-ios-teal: rgb(100,210,255);
+$color-ios-yellow: rgb(255,214,10);
+// Neutrals
+$color-white: #fafafa;
+$color-gray-1: #e7e7e7;
+$color-gray-2: #dddddd;
+$color-gray-3: #cccccc;
+$color-gray-4: #bbbbbb;
+$color-gray-5: #aaaaaa;
+$color-gray-6: #777777;
+$color-gray-7: #666666;
+$color-gray-8: #E4e5E0;
+$color-gray-9: #232F39;
+$color-black: #333333;
+
+// Brand Fonts
+$font-main: Lato;
+$font-secondary: Muli;
+$font-fallback: sans-serif;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+// Font sizes: 
+$h1: 5rem;
 $h2: 4.5rem;
 $h3: 3.5rem;
 $h4: 3rem;
 $h5: 2.5rem;
-$h6: 1.8rem;
-$p: 1.4rem;
-
-$color-white: #fafafa;
+$h6: 2rem;
+$p: 1.6rem;
+// Breakpoints
+$mobile:  48rem;
+$tablet: 76rem;
+$desktop: 99rem;
+$desktop-xl: 122rem;
+$desktop-2xl: 150rem;
+// Increments - Base Units frequently used: 
+$increment-xxsm: .5rem;
+$increment-xsm: 1rem;
+$increment-sm: 1.5rem;
+$increment-md: 2.5rem;
+$increment-lg: 5rem;
+$increment-xlg: 10rem;
+// Grid
+$container-width: 108rem;
+$gutter-horizontal : $increment-sm;
+$gutter-vertical: $increment-xsm;
+// Footer
+$pre-footer-height: 80px;
+$pre-footer-offset: calc(#{$pre-footer-height} - #{$increment-sm});

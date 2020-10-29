@@ -5,11 +5,15 @@
 @import './base/document.scss';
 @import './base/typography.scss';
 
-@import './components/_menu';
-@import './components/_header.scss';
+@import './components/react/_Menu';
+@import './components/react/_Header.scss';
+@import './components/react/_Container.scss';
+@import './components/react/_ContainerFluid.scss';
+@import './components/react/_Row.scss';
 
 
 @import './layouts/_hero.scss';
 @import './layouts/_footer.scss';
+@import './layouts/_grid';
 
 
