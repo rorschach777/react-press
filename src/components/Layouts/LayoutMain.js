@@ -10,7 +10,10 @@ import { NavLink } from 'react-router-dom';
 const LayoutMain = (props) => {
     return (
         <Aux>
-            <Header/> 
+            <Header 
+            menuPrimary={props.state.data.menuPrimary}
+            setCurrentRoute={props.setCurrentRoute}
+            /> 
                 <main>
                     <Hero setComponentData={props.setComponentData} currentPage={ props.state.page.currentPage }/>
                     <ul>

@@ -23,7 +23,7 @@ class AppContainer extends Component {
         }
     }
     getData(){
-        let apiRoute = ["pages", "posts"];
+        let apiRoute = ["pages", "posts", "menuPrimary"];
         apiRoute.forEach((cur, idx)=>{
             // Get Api Data based on configuration post types. 
             fetch(`${CONFIG.url.base}/${CONFIG.url.apiRoute}/${cur}`)

@@ -10,10 +10,12 @@
         text-align: center;
        li {
             text-align: center !important;
-            color: olive;
             list-style: inherit;
             padding: 0 8px;
             cursor: pointer;
+            a {
+                color: $color-1;
+            }
         };
     }
 }
