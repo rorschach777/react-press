@@ -15,7 +15,11 @@ const LayoutMain = (props) => {
             setCurrentRoute={props.setCurrentRoute}
             /> 
                 <main>
-                    <Hero setComponentData={props.setComponentData} currentPage={ props.state.page.currentPage }/>
+                    <Hero 
+                    setComponentData={props.setComponentData} 
+                    currentPage={ props.state.page.currentPage }
+                    setCurrentRoute={props.setCurrentRoute}
+                    />
                     <ul>
                         {props.state.routes.pageRoutes.map((cur, idx)=>{
                             return <NavLink exact to={cur} onClick={()=>props.setCurrentRoute(cur)} style={{paddingRight: '10px'}}>{cur}</NavLink>

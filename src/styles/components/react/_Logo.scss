@@ -1,17 +1,12 @@
 .Logo{
-    @include flex;
-    // @include padding($increment-sm, $increment-lg);
+    @include flex(row, center, center);
+    @include padding;
     height: $header-height;
-    width: $header-logo-width;
-    position: relative;
-    
+    width: inherit;
     img {
         @include hover;
         @include center;
+        max-width: 100%;
         transition: transform .5s;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
     }
 }

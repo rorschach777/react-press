@@ -1,0 +1,12 @@
+.Button{
+   
+   @include button-base();
+    &--primary{
+        @include padding($increment-xsm, $increment-sm);
+        font-size: 1.6rem;
+        color: $color-white !important;
+        background-color: $color-1;
+        @include hover('up');
+        width: 27rem;
+    }
+}

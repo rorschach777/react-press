@@ -36,16 +36,34 @@
     }
 }
 
-
-
-
-@mixin shadow($x : .2rem, $y : .2rem, $blur : $increment-xsm, $opacity : .3){
-    text-shadow: $x $y $blur rgba(0,0,0,$opacity);
+@mixin text-shadow(){
+    text-shadow: 2px 2px 8px rgba(0,0,0,.5);
+}
+@mixin box-shadow(){
+    box-shadow: 2px 2px $increment-xsm rgba(0,0,0,.5);
 }
 
-@mixin hover(){
-    &:hover{
-        transform: scale(1.1);
-        cursor: pointer;
+
+@mixin hover($type : normal){
+    cursor: pointer;
+    @if ($type = "up"){
+        &:hover{
+            transform: translateY(-1rem);
+            @include box-shadow();
+            color: inherit;
+        }
     }
+    @else{
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+ 
+}
+
+@mixin button-base(){
+    border-radius: $increment-sm;
+    text-align: center;
+    @include center;
+    transition: transform .2s;
 }

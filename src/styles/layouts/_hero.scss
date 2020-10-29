@@ -1,5 +1,4 @@
 .Hero{
-
     background-color: #333;
     width: 100%;
     min-height: 550px;
@@ -25,8 +24,8 @@
         &__content{
             width: 1140px;
             h1{
-                @include shadow();
                 color:  $color-white !important;
+                @include text-shadow();
             }
             text-align: center;
             z-index: 2;
