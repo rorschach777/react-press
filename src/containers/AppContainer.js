@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../Hoc/Aux';
 import { CONFIG } from '../config/Config';
 import LayoutMain from '../components/Layouts/LayoutMain';
+import LoadingScreen from '../components/LoadingScreen';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 class AppContainer extends Component {
     constructor(props){
@@ -16,16 +17,17 @@ class AppContainer extends Component {
                 currentPage: null,
             },
             data: {
-                pages: null,
-                posts: null,
-                menuPrimary: null
+                getDataComplete: false
             }
         }
     }
+    showState(){
+        console.log(this.state);
+    }
     getData(){
         let apiRoute = ["pages", "posts", "menuPrimary"];
+        // Get Api Data based on configuration post types. 
         apiRoute.forEach((cur, idx)=>{
-            // Get Api Data based on configuration post types. 
             fetch(`${CONFIG.url.base}/${CONFIG.url.apiRoute}/${cur}`)
             // Transform Data to JSON
             .then(d => {
@@ -51,6 +53,7 @@ class AppContainer extends Component {
                             _allRoutes.push(cur.slug);
                         })
                     }
+                    // This creates the data objects in state. 
                     this.setState(prevState=>{
                         return{
                             ...prevState,
@@ -68,6 +71,20 @@ class AppContainer extends Component {
                 });
                 return updatedData
             })
+            // once all data received set as complete, used to trigger loading screen. 
+            .then(updatedData=>{
+                this.setState(prevState=>{
+                    return {
+                        ...prevState,
+                        data: {
+                            ...prevState.data,
+                            getDataComplete : true
+                        }
+                    }
+                })
+                return updatedData;
+            })
+            // Set the current page obect, we specify the homepage as default. 
             .then(updatedData=>{
                 let _currentRoute = window.location.href;
                 let _setRoute;
@@ -79,10 +96,11 @@ class AppContainer extends Component {
                             ...prevState.routes,
                             currentRoute : _setRoute
                         }
-                       
                     }
-                })
+                }, this.setCurrentPageObject())
+                return updatedData;
             })
+          
         });
     }
     componentDidMount(){
@@ -94,16 +112,10 @@ class AppContainer extends Component {
         }
     }
     componentDidUpdate(prevProps, prevState) {
-        if (this.state !== prevState) {
-          console.log(this.state);
-        }
         // If route changes update the page object
         if (this.state.routes.currentRoute != prevState.routes.currentRoute){
             this.setCurrentPageObject();
         }
-    }
-    showState(){
-        console.log(this.showState);
     }
     setCurrentPageObject(){
         let _currentPage = null;
@@ -115,7 +127,6 @@ class AppContainer extends Component {
                 }
              })
         }
-       
        this.setState(prevState=>{
            return {
                 ...prevState,
@@ -137,7 +148,6 @@ class AppContainer extends Component {
         });
         return dataObject;
     }
-    
     setCurrentRoute(_currentRoute){
         console.log(_currentRoute)
         this.setState((prevState=>{
@@ -150,24 +160,28 @@ class AppContainer extends Component {
             }
         }))
     }
-    test(){
-        console.log("test");
-        this.setState(prevState=>{
-            return{
-                test: "test123"
-            }
-        })
+    AppContent =()=>{
+        if(this.state.data.getDataComplete && this.state.page.currentPage != null){
+            return (
+                <LayoutMain 
+                state={this.state} 
+                setComponentData={(componentName)=>this.setComponentData(componentName)}
+                setCurrentRoute={(route)=>this.setCurrentRoute(route)}
+                test={()=>this.test()}
+                />
+            );
+    
+        }
+        else{
+            return(
+                <LoadingScreen/>
+            );
+        }
     }
     render() {
         return (
             <Aux>
-               <LayoutMain 
-               state={this.state} 
-               setComponentData={(componentName)=>this.setComponentData(componentName)}
-               setCurrentRoute={(route)=>this.setCurrentRoute(route)}
-               test={()=>this.test()}
-               />
-        
+                {this.AppContent()}
             </Aux>
         );
     }
