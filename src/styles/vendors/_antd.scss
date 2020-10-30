@@ -2,12 +2,9 @@
     color: #fff;
     background: $primary-button-color !important;
     border-color:$primary-button-color !important;
-
+    @include hover(up);
     &:hover{
         background: $primary-button-color !important;
         border-color:$primary-button-color !important;
     }
-}
-.ant-btn{
-    @include hover(up);
 }

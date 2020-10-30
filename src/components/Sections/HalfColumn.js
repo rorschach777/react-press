@@ -2,12 +2,15 @@ import React from 'react';
 import Container from '../Container';
 import Column from '../Column';
 import * as stringResources from '../../string-resources/string-resources';
+import SectionHeadline from '../../SectionHeadline';
+
 const HalfColumn = (props) => {
     const data = props.setComponentData(stringResources.twoColumnLayoutEven);
-    console.log(data);
+    conosole.log(data);
     return (
         <section className={`Section HalfColumn HalfColumn--${props.modifier}`}>
             <Container>
+                <SectionHeadline text={"XYZ"} align="center"/>
                 <Column modifier="1-of-2">
                     <h4>{data.left_column_headline}</h4>
                     <img src={data.left_column_image_one} />
@@ -22,7 +25,6 @@ const HalfColumn = (props) => {
                     <p>
                         {data.left_column_text_three}
                     </p>
-             
                 </Column>
                 <Column modifier="1-of-2">
                     <h4>{data.right_column_headline}</h4>
