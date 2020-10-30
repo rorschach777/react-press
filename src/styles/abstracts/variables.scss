@@ -38,8 +38,8 @@ $font-weight-bold: 700;
 $font-weight-medium: 500;
 $font-weight-light: 300;
 // Font sizes: 
-$h1: 5rem;
-$h2: 4.5rem;
+$h1: 5.2rem;
+$h2: 4rem;
 $h3: 3.5rem;
 $h4: 3rem;
 $h5: 2.5rem;
@@ -71,3 +71,8 @@ $pre-footer-offset: calc(#{$pre-footer-height} - #{$increment-sm});
 // Other
 $border-radius: $increment-xsm;
 $primary-button-color: $color-1;
+
+// Hero
+$hero-color-overlay: $color-6;
+$hero-color-h1: $color-white;
+$hero-color-h2: $color-gray-3;

@@ -138,6 +138,7 @@ class AppContainer extends Component {
        }, this.showState())
     
     }
+    // This is used to grab a data object within the current page data. 
     setComponentData = (componentName)=>{
         let components = this.state.page.currentPage.acf_fields.component;
         let dataObject = null

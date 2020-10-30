@@ -1,7 +1,8 @@
 
 import React from 'react';
-import Button from './Button';
+import NavigationLink from './NavigationLink';
 import {CONFIG} from '../config/Config';
+import {formatNavLink} from '../utilities/utilities';
 const Hero = (props) => {
     let backgroundImageURL; 
     const content = ()=>{
@@ -9,19 +10,18 @@ const Hero = (props) => {
         backgroundImageURL = data.background_image_url;
         console.log(backgroundImageURL)
         const renderNavLink = () => {
-            let link = data.call_to_action_redirect;
-            let formattedNavLink = link.replace(CONFIG.url.base, '');
-            formattedNavLink = formattedNavLink.replace('/','');
+           
+            let formattedNavLink = formatNavLink(data.call_to_action_redirect);
           
             if (data.call_to_action_enabled){
                return(
-                <Button 
+                <NavigationLink 
                 href={formattedNavLink}
                 buttonModifier={'primary'}
                 setCurrentRoute={props.setCurrentRoute}
                 >
                     {data.call_to_action_text}
-                </Button>
+                </NavigationLink>
                )
              
             }

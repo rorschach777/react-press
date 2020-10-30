@@ -7,8 +7,9 @@
 @import './base/typography';
 // Component Library
 @import './components/react/_Menu';
-@import './components/react/_Button';
+@import './components/react/_NavigationLink';
 @import './components/react/_Header';
+@import './components/react/_Hero';
 @import './components/react/_Container';
 @import './components/react/_ContainerFluid';
 @import './components/react/_Row';
@@ -16,7 +17,7 @@
 @import './components/react/_ModalBackground';
 @import './components/react/_LoadingScreen';
 // Layouts
-@import './layouts/_hero';
+
 @import './layouts/_footer';
 @import './layouts/_grid';
 // Pages

@@ -1,5 +1,4 @@
 .Hero{
-    background-color: #333;
     width: 100%;
     min-height: 550px;
     display: flex;
@@ -20,11 +19,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         &__content{
             width: 1140px;
             h1{
-                color:  $color-white !important;
+                color: $hero-color-h1 !important;
+                @include text-shadow();
+            }
+            h2{
+                color: $hero-color-h2 !important;
                 @include text-shadow();
             }
             text-align: center;
@@ -40,8 +42,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: red !important;
-            opacity: .23;
+            background: linear-gradient(-180deg, rgba($hero-color-overlay, .6), rgba($hero-color-overlay, .7));
         }
     }
   

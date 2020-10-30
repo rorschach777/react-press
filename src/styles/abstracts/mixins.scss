@@ -44,16 +44,16 @@
 }
 
 
-@mixin hover($type : normal){
+@mixin hover($type : "normal"){
     cursor: pointer;
-    @if ($type = "up"){
+    @if ($type == "up"){
         &:hover{
             transform: translateY(-1rem);
             @include box-shadow();
             color: inherit;
         }
     }
-    @else{
+    @else if($type == "normal"){
         &:hover{
             transform: scale(1.1);
         }

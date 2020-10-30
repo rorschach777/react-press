@@ -1,15 +1,15 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-const Button = (props) => {
+const NavigationLink = (props) => {
     return (
         <NavLink 
         exact 
         to={props.href} 
         onClick={()=>props.setCurrentRoute(props.href.toLowerCase())}
-        className={`Button Button--${props.buttonModifier}`}>
+        className={`NavigationLink NavigationLink--${props.buttonModifier}`}>
             {props.children}
         </NavLink>
     );
 };
 
-export default Button;
+export default NavigationLink;
