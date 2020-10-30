@@ -1,0 +1,1 @@
+export const twoColumnLayoutEven = "two_column_layout_even";

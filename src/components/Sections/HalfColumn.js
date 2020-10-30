@@ -1,8 +1,9 @@
 import React from 'react';
 import Container from '../Container';
 import Column from '../Column';
+import * as stringResources from '../../string-resources/string-resources';
 const HalfColumn = (props) => {
-    const data = props.setComponentData("two_column_layout");
+    const data = props.setComponentData(stringResources.twoColumnLayoutEven);
     console.log(data);
     return (
         <section className={`Section HalfColumn HalfColumn--${props.modifier}`}>

@@ -5,10 +5,19 @@ import Aux from '../../Hoc/Aux';
 import Hero from '../../components/Hero';
 import { NavLink } from 'react-router-dom';
 import HalfColumn from '../../components/Sections/HalfColumn';
+import * as stringResources from '../../string-resources/string-resources';
+import Meta from '../Meta';
 const LayoutMain = (props) => {
     const renderPageComponents = (layout) => {
         switch(layout){
             // HERO
+            case "head":
+                return(
+                    <Meta
+                    setComponentData={props.setComponentData} 
+                    />
+                );
+                break;
             case "hero" : 
                 return (
                     <Hero 
@@ -19,7 +28,7 @@ const LayoutMain = (props) => {
                 );
                 break;
             // TWO COLUMN LAYOUT EVEN
-            case "two_column_layout" : 
+            case stringResources.twoColumnLayoutEven : 
                 return (
                     <HalfColumn
                     setComponentData={props.setComponentData}
@@ -31,6 +40,7 @@ const LayoutMain = (props) => {
     }
     return (
         <Aux>
+          
             <Header 
             menuPrimary={props.state.data.menuPrimary}
             setCurrentRoute={props.setCurrentRoute}

@@ -3,12 +3,13 @@ import React from 'react';
 import Logo from './Logo';
 import Menu from './Menu';
 import DrawerMenu from './DrawerMenu';
+import {NavLink} from 'react-router-dom';
 const Header = (props) => {
   return (
     <div className="Header">
       <div className="Header__inner">
         <div className="Header__inner__logo">
-          <Logo />
+          <NavLink exact to="/"><Logo /></NavLink>
         </div>
         <Menu
           menuPrimary={props.menuPrimary}
