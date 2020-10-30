@@ -1,4 +1,5 @@
 import React from 'react';
+// TODO : this could be causing a venerability? 
 import { Helmet } from 'react-helmet';
 const Meta = (props) => {
     const data = props.setComponentData("head");
@@ -10,5 +11,4 @@ const Meta = (props) => {
       </Helmet>
     );
 };
-
 export default Meta;

@@ -5,8 +5,9 @@ import {CONFIG} from '../config/Config';
 import {formatNavLink} from '../utilities/utilities';
 const Hero = (props) => {
     let backgroundImageURL; 
+    let data = props.setComponentData("hero");
     const content = ()=>{
-        let data = props.setComponentData("hero");
+  
         backgroundImageURL = data.background_image_url;
         console.log(backgroundImageURL)
         const renderNavLink = () => {
@@ -38,8 +39,8 @@ const Hero = (props) => {
         )
     }
     return (
-        <div className="Hero">
-           { props.currentPage != null ? content() : "loading" }
+        <div className="Hero" style={{minHeight: `${data.hero_height}rem`}}>
+           { props.currentPage != null ? content(data) : "loading" }
         </div>
     );
 };
