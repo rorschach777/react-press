@@ -10,9 +10,7 @@ const Hero = (props) => {
         backgroundImageURL = data.background_image_url;
         console.log(backgroundImageURL)
         const renderNavLink = () => {
-           
             let formattedNavLink = formatNavLink(data.call_to_action_redirect);
-          
             if (data.call_to_action_enabled){
                return(
                 <NavigationLink 

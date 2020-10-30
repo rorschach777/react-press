@@ -2,7 +2,7 @@ import React from 'react';
 
 const Column = (props) => {
     return (
-        <div className={`Column Column--${props.width}`}>
+        <div className={`Column Column--${props.modifier}`}>
             {props.children}
         </div>
     );

@@ -2,7 +2,10 @@
     @include column-base;
     &--1-of-2{
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        background-color: $color-ios-pink;
+        @media only screen and (max-width: $tablet){
+            width: 100%;
+        }
+        // background-color: $color-ios-pink;
     }
     &--1-of-3{
         width: calc((100% - (#{$gutter-horizontal} * 2)) / 3);

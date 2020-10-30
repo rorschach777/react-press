@@ -18,7 +18,8 @@
 
 // Grid
 @mixin container($fluid : false){
-    padding: 0px;
+    padding: 0 $increment-sm;
+    max-width: 100%;
     @if($fluid){
         width: 100%;
     }

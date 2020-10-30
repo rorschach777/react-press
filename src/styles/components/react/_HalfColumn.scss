@@ -1,0 +1,11 @@
+.HalfColumn{
+    &--even{
+        h4{
+            color: $color-1;
+        }
+        p {
+            text-align: left;
+        }
+       
+    }
+}

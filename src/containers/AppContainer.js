@@ -166,6 +166,7 @@ class AppContainer extends Component {
             return (
                 <LayoutMain 
                 state={this.state} 
+                components={this.state.page.currentPage.acf_fields.component}
                 setComponentData={(componentName)=>this.setComponentData(componentName)}
                 setCurrentRoute={(route)=>this.setCurrentRoute(route)}
                 test={()=>this.test()}

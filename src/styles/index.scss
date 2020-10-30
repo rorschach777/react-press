@@ -5,9 +5,11 @@
 // Base
 @import './base/document';
 @import './base/typography';
+@import './base/Section';
 // Component Library
 @import './components/react/_Menu';
 @import './components/react/_NavigationLink';
+@import './components/react/_HalfColumn';
 @import './components/react/_Header';
 @import './components/react/_Hero';
 @import './components/react/_Container';
