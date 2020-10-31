@@ -3,9 +3,7 @@ import Row from './Row';
 const ContainerFluid = (props) => {
     return (
         <div className="ContainerFluid">
-            <Row>
-                {props.children}
-            </Row>
+            {props.children}
         </div>
     );
 };

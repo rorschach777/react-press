@@ -1,1 +1,2 @@
-export const twoColumnLayoutEven = "two_column_layout_even";
+export const twoColumnEven = "two_column_even";
+export const fullWidthColumn = "full_width_column";

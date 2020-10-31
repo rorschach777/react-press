@@ -7,17 +7,21 @@
 @import './base/typography';
 @import './base/Section';
 // Component Library
-@import './components/react/_Menu';
-@import './components/react/_NavigationLink';
+
+
+@import './components/react/_ContainerFluid';
 @import './components/react/_HalfColumn';
 @import './components/react/_Header';
 @import './components/react/_Hero';
 @import './components/react/_Container';
-@import './components/react/_ContainerFluid';
-@import './components/react/_Row';
-@import './components/react/_Logo';
-@import './components/react/_ModalBackground';
 @import './components/react/_LoadingScreen';
+@import './components/react/_Logo';
+@import './components/react/_Menu';
+@import './components/react/_ModalBackground';
+@import './components/react/_NavigationLink';
+@import './components/react/_Row';
+@import './components/react/_SectionHeadline';
+
 // Layouts
 
 @import './layouts/_footer';

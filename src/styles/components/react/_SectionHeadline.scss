@@ -1,0 +1,4 @@
+.SectionHeadline{
+    @include padding($increment-sm, 0);
+    color: $section-headline-color;
+}

@@ -2,13 +2,14 @@ import React from 'react';
 import Container from '../Container';
 import Column from '../Column';
 import * as stringResources from '../../string-resources/string-resources';
-import SectionHeadline from '../../SectionHeadline';
+import SectionHeadline from '../SectionHeadline';
+import SectionBody from './SectionBody';
 
 const HalfColumn = (props) => {
-    const data = props.setComponentData(stringResources.twoColumnLayoutEven);
-    conosole.log(data);
+    const data = props.setComponentData(stringResources.twoColumnEven);
+    console.log(data);
     return (
-        <section className={`Section HalfColumn HalfColumn--${props.modifier}`}>
+        <SectionBody modifier={`HalfColumn HalfColumn--${props.modifier}`}>
             <Container>
                 <SectionHeadline text={"XYZ"} align="center"/>
                 <Column modifier="1-of-2">
@@ -42,7 +43,7 @@ const HalfColumn = (props) => {
                     </p>
                 </Column>
             </Container>
-        </section>
+        </SectionBody>
     );
 };
 

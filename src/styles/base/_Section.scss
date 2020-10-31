@@ -1,3 +1,41 @@
 section.Section{
     @include padding($increment-lg, 0, $increment-lg, 0);
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    &--overlay{
+       &-light{
+            & > .ContainerFluid > .Container{
+                position: relative;
+                z-index: 2;   
+            }
+            &:after{
+                z-index: 1;
+                @include absolute-full-content;
+                background-color: rgba($color-white, .85);
+            }
+       }
+       &-dark{
+        & > .ContainerFluid > .Container{
+            h3, h4, h5, h6, p, span {
+                color:$color-white !important ;
+            }
+            position: relative;
+            z-index: 2;   
+        }
+        &:after{
+   
+            z-index: 1;
+            @include absolute-full-content;
+            background-color: rgba($color-black, .75);
+        }
+     
+   }
+    }
+    &:not(:last-child){
+        border-bottom: solid 1px $color-gray-1;
+    }
+    
 }
