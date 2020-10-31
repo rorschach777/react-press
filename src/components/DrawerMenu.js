@@ -5,10 +5,10 @@ const DrawerMenu = (props) => {
     return (
       <Drawer
           title="Basic Drawer"
-          placement={props.placement}
+          placement={props.drawer.placement}
           closable={false}
-          onClose={props.onClose}
-          visible={props.visible}
+          onClose={props.closeDrawer}
+          visible={props.drawer.visible}
           key={props.placement}
       >
           <p>Some contents...</p>

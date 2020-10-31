@@ -8,6 +8,10 @@ class AppContainer extends Component {
     constructor(props){
         super();
         this.state = {
+            drawer : {
+                placement : 'top',
+                visible : true
+            },
             routes: {
                 currentRoute: null,
                 pageRoutes: []
@@ -103,6 +107,18 @@ class AppContainer extends Component {
           
         });
     }
+    closeDrawer=()=>{
+        console.log('close me')
+        this.setState(prevState=>{
+            return{
+                ...prevState,
+                drawer: {
+                    ...prevState.drawer,
+                    visible: false
+                }
+            }
+        })
+    }
     componentDidMount(){
         this.getData();
     }
@@ -166,6 +182,7 @@ class AppContainer extends Component {
             return (
                 <LayoutMain 
                 state={this.state} 
+                closeDrawer={this.closeDrawer}
                 components={this.state.page.currentPage.acf_fields.component}
                 setComponentData={(componentName)=>this.setComponentData(componentName)}
                 setCurrentRoute={(route)=>this.setCurrentRoute(route)}

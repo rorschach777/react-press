@@ -6,6 +6,11 @@ import DrawerMenu from './DrawerMenu';
 import {NavLink} from 'react-router-dom';
 const Header = (props) => {
   return (
+    <>
+    <DrawerMenu 
+    drawer={props.drawer}
+    closeDrawer={props.closeDrawer}
+    />
     <div className="Header">
       <div className="Header__inner">
         <div className="Header__inner__logo">
@@ -17,6 +22,7 @@ const Header = (props) => {
         />
       </div>
     </div>
+    </>
   );
 }
 

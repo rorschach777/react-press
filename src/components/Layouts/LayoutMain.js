@@ -64,6 +64,8 @@ const LayoutMain = (props) => {
             <Header 
             menuPrimary={props.state.data.menuPrimary}
             setCurrentRoute={props.setCurrentRoute}
+            closeDrawer={props.closeDrawer}
+            drawer={props.state.drawer}
             /> 
                 <main>
                     {
