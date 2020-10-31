@@ -5,18 +5,23 @@ import * as stringResources from '../../string-resources/string-resources';
 import SectionHeadline from '../SectionHeadline';
 import SectionBody from './SectionBody';
 
-const ThreeColumnEvenSection = () => {
+const ThreeColumnEvenSection = (props) => {
+    const data = props.setComponentData(stringResources.threeColumnSection);
     return (
         <SectionBody>
+            <SectionHeadline text={data.headline}/>
             <Container>
                 <Column modifier={'1-of-3'}>
-                    Left Content
+                    <h5>{data.left_column_headline}</h5>
+                    <p>{data.left_column_text}</p>
                 </Column>
                 <Column modifier={'1-of-3'}>
-                    Middle Content
+                    <h5>{data.center_column_headline}</h5>
+                    <p>{data.center_column_text}</p>
                 </Column>
                 <Column modifier={'1-of-3'}>
-                    Right Content
+                    <h5>{data.right_column_headline}</h5>
+                    <p>{data.right_column_text}</p>
                 </Column>
             </Container>
         </SectionBody>

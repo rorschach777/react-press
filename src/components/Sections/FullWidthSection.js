@@ -7,7 +7,7 @@ import * as stringResources from '../../string-resources/string-resources';
 import SectionHeadline from '../SectionHeadline';
 import SectionBody from './SectionBody';
 const FullWidthColumn = (props) => {
-    const data = props.setComponentData(stringResources.fullWidthColumn);
+    const data = props.setComponentData(stringResources.fullWidthSection);
     console.log(data);
     return (
         <SectionBody 
@@ -21,7 +21,7 @@ const FullWidthColumn = (props) => {
                 <Container>
                     <h3>{data.headline}</h3>
                     <h4>{data.sub_headline}</h4>
-                    <span>{data.include_overlay}</span>
+                    <p>{data.text}</p>
                 </Container>
             </ContainerFluid>
         </SectionBody>

@@ -5,6 +5,7 @@ import Aux from '../../Hoc/Aux';
 import Hero from '../../components/Hero';
 import { NavLink } from 'react-router-dom';
 import HalfColumnSection from '../Sections/HalfColumnSection';
+import ThreeColumnSection from '../Sections/ThreeColumnSection';
 import FullWidthSection from '../Sections/FullWidthSection';
 import * as stringResources from '../../string-resources/string-resources';
 import Meta from '../Meta';
@@ -28,7 +29,7 @@ const LayoutMain = (props) => {
                     />
                 );
                 break;
-            // TWO COLUMN LAYOUT EVEN
+            // TWO COLUMN SECTION
             case stringResources.twoColumnEven : 
                 return (
                     <HalfColumnSection
@@ -37,8 +38,17 @@ const LayoutMain = (props) => {
                     />
                 );
                 break;
-            // FULL WIDTH COLUMN 
-            case stringResources.fullWidthColumn : 
+            // THREE COLUMN SECTION
+            case stringResources.threeColumnSection : 
+            return (
+                <ThreeColumnSection
+                setComponentData={props.setComponentData}
+                modifier={'even'}
+                />
+            );
+            break;
+            // FULL WIDTH Section
+            case stringResources.fullWidthSection : 
             return (
                 <FullWidthSection
                 setComponentData={props.setComponentData}
