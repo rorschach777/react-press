@@ -11,7 +11,7 @@ const clientConfig = {
         development: "http://localhost:8888/laboski-backend/dist/",
         production: "https://google.com",
     },
-    selectedRoutes : ["pages", "posts"]
+    selectedRoutes : ["pages", "posts", "cards"]
 }
 // This object is being exposed to the frontend to obtain the data. 
 export const CONFIG = {

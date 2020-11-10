@@ -3,15 +3,16 @@ import Container from '../Container';
 import Column from '../Column';
 import * as stringResources from '../../string-resources/string-resources';
 import SectionHeadline from '../SectionHeadline';
+import SectionSubheadline from '../SectionSubheadline';
 import SectionBody from './SectionBody';
 
 const HalfColumn = (props) => {
     const data = props.setComponentData(stringResources.twoColumnEven);
-    console.log(data);
     return (
         <SectionBody modifier={`HalfColumn HalfColumn--${props.modifier}`}>
             <Container>
-                <SectionHeadline text={"XYZ"} align="center"/>
+                <SectionHeadline text={data.section_headline} align="center"/>
+                <SectionSubheadline text={data.section_subheadline} align="center"/>
                 <Column modifier="1-of-2">
                     <h4>{data.left_column_headline}</h4>
                     <img src={data.left_column_image_one} />

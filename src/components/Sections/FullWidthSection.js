@@ -8,7 +8,6 @@ import SectionHeadline from '../SectionHeadline';
 import SectionBody from './SectionBody';
 const FullWidthColumn = (props) => {
     const data = props.setComponentData(stringResources.fullWidthSection);
-    console.log(data);
     return (
         <SectionBody 
         className={`Section`} 

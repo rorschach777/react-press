@@ -1,0 +1,33 @@
+.Card{
+    @include padding;
+    border-radius: .5rem;
+    border: solid 1px #ddd;
+    height: 400px;
+    &--Dark{
+        background-color: $color-dark;
+        color: $color-white;
+        h4, h5 {
+            color: $color-white !important;
+        }
+    }
+    &--Light {
+        background-color: $color-white;
+        h4 {
+            color: $color-1;
+        }
+    }
+    &--Primary {
+        background-color: $color-1;
+        h4, h5 {
+            color: $color-white;
+        }
+        color: $color-dark;
+    }
+    &--Secondary {
+        background-color: $color-5;
+        h4, h5 {
+            color: $color-white;
+        }
+        color: $color-white;
+    }
+}

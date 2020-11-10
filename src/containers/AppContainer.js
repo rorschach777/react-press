@@ -25,11 +25,11 @@ class AppContainer extends Component {
             }
         }
     }
-    showState(){
+    showState = () => {
         console.log(this.state);
     }
     getData(){
-        let apiRoute = ["pages", "posts", "menuPrimary"];
+        let apiRoute = ["pages", "posts", "menuPrimary", "card"];
         // Get Api Data based on configuration post types. 
         apiRoute.forEach((cur, idx)=>{
             fetch(`${CONFIG.url.base}/${CONFIG.url.apiRoute}/${cur}`)
@@ -104,9 +104,15 @@ class AppContainer extends Component {
                 }, this.setCurrentPageObject())
                 return updatedData;
             })
+      
           
         });
     }
+    updateData = (d) => {
+
+        return;
+    }
+
     closeDrawer=()=>{
         console.log('close me')
         this.setState(prevState=>{
@@ -151,9 +157,10 @@ class AppContainer extends Component {
                     currentPage: _currentPage
                 }
             }
-       }, this.showState())
-    
-    }
+       },
+      ()=>{this.showState()}
+    )}
+
     // This is used to grab a data object within the current page data. 
     setComponentData = (componentName)=>{
         let components = this.state.page.currentPage.acf_fields.component;
@@ -166,7 +173,6 @@ class AppContainer extends Component {
         return dataObject;
     }
     setCurrentRoute(_currentRoute){
-        console.log(_currentRoute)
         this.setState((prevState=>{
             return{
                 ...prevState,
