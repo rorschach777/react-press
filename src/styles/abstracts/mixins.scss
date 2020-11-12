@@ -79,6 +79,21 @@
     @include center;
     transition: transform .2s;
 }
-@mixin border(){
+@mixin border($color : $color-gray-1){
     border: $color-gray-1 .2rem solid;
+}
+@mixin shadow($opacity : .5){
+    box-shadow: .2rem .2rem 1rem rgba(0,0,0,$opacity) !important;
+}
+
+
+@mixin absolute(){
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: inherit;
+    top:0;
+    left: 0;
+    right: 0;
 }

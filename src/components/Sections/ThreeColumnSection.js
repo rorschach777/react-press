@@ -29,8 +29,13 @@ const ThreeColumnEvenSection = (props) => {
             case "card_double_sided" : {
                 return (
                     <CardDoubleSided
-                        headline={m.headline}
-                        subHeadline={m.sub_headline}
+                        frontHeadline={m.front_headline}
+                        frontSubHeadline={m.front_sub_headline}
+                        frontModifier={m.front_scheme}
+                        backHeadline={m.back_headline}
+                        backSubHeadline={m.back_sub_headline}
+                        backModifier={m.back_scheme}
+                        bodyText={m.body_text}
                     />
                 )
             }

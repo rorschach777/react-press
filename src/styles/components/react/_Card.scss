@@ -6,7 +6,7 @@
     &--Dark{
         background-color: $color-dark;
         color: $color-white;
-        h4, h5 {
+        h4, h5, h6 {
             color: $color-white !important;
         }
     }
@@ -18,16 +18,60 @@
     }
     &--Primary {
         background-color: $color-1;
-        h4, h5 {
+        h4, h5, h6 {
             color: $color-white;
         }
         color: $color-dark;
     }
     &--Secondary {
         background-color: $color-5;
-        h4, h5 {
+        h4, h5, h6 {
             color: $color-white;
         }
         color: $color-white;
     }
+    &__double-sided{
+      
+        height: 400px;
+        position: relative;
+        border-radius: .5rem;
+        transition: transform .8s ease;
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        @include padding;
+    
+        &__side{
+   
+           @include absolute;
+           @include padding;
+           transition: inherit;
+           backface-visibility: hidden;
+           border-radius: inherit;
+           text-align: center;
+           width: inherit;
+           max-width: inherit;
+           &--front{
+              @include border($color-1);
+              z-index: 2;
+           }
+           &--back{
+              @include shadow();
+              z-index: 1;
+              transform: rotateY(-180deg)
+           }
+        
+        }
+        &:hover{
+           transform: scale(1.1);
+        }
+  
+        &:hover &__side--front{
+           transform: rotateY(180deg);
+           
+        }
+        &:hover &__side--back{
+           transform: rotateY(0deg);
+        }
+     }
+
 }
