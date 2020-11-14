@@ -1,8 +1,10 @@
 import React from 'react';
 import Container from '../Container';
+import ContainerMini from '../ContainerMini';
 import Column from '../Column';
 import * as stringResources from '../../string-resources/string-resources';
 import SectionHeadline from '../SectionHeadline';
+import SectionSubheadline from '../SectionSubheadline';
 import SectionBody from './SectionBody';
 import Card from '../Card';
 import CardDoubleSided from '../CardDoubleSided';
@@ -21,6 +23,7 @@ const ThreeColumnEvenSection = (props) => {
                         enableButton={m.enable_button}
                         buttonText={m.button_text}
                         buttonURL={m.button_url}
+                        height={m.height}
                     
                     />
                 )
@@ -29,6 +32,8 @@ const ThreeColumnEvenSection = (props) => {
             case "card_double_sided" : {
                 return (
                     <CardDoubleSided
+                        enableIcon={m.enable_icon}
+                        iconURL={m.icon_url}
                         frontHeadline={m.front_headline}
                         frontSubHeadline={m.front_sub_headline}
                         frontModifier={m.front_scheme}
@@ -36,6 +41,10 @@ const ThreeColumnEvenSection = (props) => {
                         backSubHeadline={m.back_sub_headline}
                         backModifier={m.back_scheme}
                         bodyText={m.body_text}
+                        height={m.height}
+                        buttonEnabled={m.button_enabled}
+                        buttonText={m.button_text}
+                        buttonURL={m.button_url}
                     />
                 )
             }
@@ -53,22 +62,29 @@ const ThreeColumnEvenSection = (props) => {
 
     return (
         <SectionBody>
-            <SectionHeadline text={data.headline}/>
-            <Container>
+            <Container >
+                <SectionHeadline text={data.headline} align="center"/>
+                <SectionSubheadline text={data.sub_headline} align="center"/>
                 <Column modifier={'1-of-3'}>
                     <h5>{data.left_column_headline}</h5>
-                    <p>{data.left_column_text}</p>
                     {renderFlexibleContent(data.left_column_module[0])}
+                    <div className="u-text-left">
+                        <p>{data.left_column_text}</p>
+                    </div>
                 </Column>
                 <Column modifier={'1-of-3'}>
                     <h5>{data.center_column_headline}</h5>
-                    <p>{data.center_column_text}</p>
                     {renderFlexibleContent(data.center_column_module[0])}
+                    <div className="u-text-left">
+                        <p>{data.center_column_text}</p>
+                    </div>
                 </Column>
                 <Column modifier={'1-of-3'}>
                     <h5>{data.right_column_headline}</h5>
-                    <p>{data.right_column_text}</p>
                     {renderFlexibleContent(data.right_column_module[0])}
+                    <div className="u-text-left">
+                        <p>{data.right_column_text}</p>
+                    </div>
                 </Column>
             </Container>
         </SectionBody>

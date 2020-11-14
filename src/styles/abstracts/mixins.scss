@@ -44,7 +44,6 @@
     box-shadow: 2px 2px $increment-xsm rgba(0,0,0,.5);
 }
 
-
 @mixin hover($type : "normal"){
     cursor: pointer;
     @if ($type == "up"){
@@ -96,4 +95,23 @@
     top:0;
     left: 0;
     right: 0;
+}
+
+@mixin card-base(){
+    position: relative;
+    @include padding;
+    border-radius: .5rem;
+    margin-bottom: $increment-md;
+    align-items: inherit;
+}
+
+@mixin read-more-overwrite($a : $color-white, $b: $color-1){
+    background-color: $a !important;
+    border-color: $a !important;
+    color: $b !important;
+    &:hover {
+        background-color: $b !important;
+        border-color: $b !important;
+        color: $a !important; 
+    }
 }

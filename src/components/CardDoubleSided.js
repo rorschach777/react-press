@@ -1,16 +1,18 @@
 import React from 'react';
-
+import ButtonReadMore from './ButtonReadMore';
 const CardDoubleSided = (props) => {
     return (
-        <div className={`Card__double-sided `}>
+        <div style={{height: `${props.height}rem`}} className={`Card__double-sided `}>
             <div className={`Card__double-sided__side Card__double-sided__side--front Card--${props.frontModifier}`}>
-                <h4>{props.frontHeadline}</h4>
-                <h5>{props.frontSubHeadline}</h5>
+                {props.enableIcon ? <img className="icon" src={props.iconURL}/> : null}
+                <h5>{props.frontHeadline}</h5>
+                <h6>{props.frontSubHeadline}</h6>
                 <p>{props.bodyText}</p>
             </div>
             <div className={`Card__double-sided__side Card__double-sided__side--back Card--${props.backModifier}`}>
-                <h4>{props.backHeadline}</h4>
-                <h5>{props.backSubHeadline}</h5>
+                <h5>{props.backHeadline}</h5>
+                <h6>{props.backSubHeadline}</h6>
+                {props.buttonEnabled? <ButtonReadMore text={props.buttonText} url={props.buttonURL}/> : null }
             </div>
         </div>
     );

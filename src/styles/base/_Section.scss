@@ -5,6 +5,8 @@ section.Section{
     height: auto;
     overflow: hidden;
     position: relative;
+    padding: $increment-lg 0;
+    box-sizing: border-box; 
     &--overlay{
        &-light{
             & > .ContainerFluid > .Container{
@@ -37,5 +39,6 @@ section.Section{
     &:not(:last-child){
         border-bottom: solid 1px $color-gray-1;
     }
+
     
 }

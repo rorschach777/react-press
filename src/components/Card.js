@@ -1,13 +1,12 @@
 import React from 'react';
+import ButtonReadMore from './ButtonReadMore';
 const Card = (props) => {
     return (
-        <div className={`Card Card--${props.modifier}`}>
+        <div style={{height:`${props.height}rem`}} className={`Card Card--${props.modifier}`}>
             <h4>{props.headline}</h4>
             <h5>{props.subHeadline}</h5>
             <p>{props.bodyText}</p>
-            {/* <button>A button</button> */}
-            {props.enableButton? <a href={props.buttonURL}>{props.buttonText}</a> : null }
-          
+            {props.enableButton ? <ButtonReadMore text={props.buttonText} url={props.buttonURL}/> : null }
         </div>
     );
 };

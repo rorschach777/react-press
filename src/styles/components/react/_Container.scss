@@ -1,4 +1,9 @@
 .Container{
     @include container();
-
+    &--stretch {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        max-height: 100%;
+    }
 }

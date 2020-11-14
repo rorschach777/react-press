@@ -1,5 +1,5 @@
-.SectionHeadline{
-    @include padding($increment-sm, 0);
-    color: $color-gray-7 !important;
-    margin: 0px;
+.SectionSubheadline{
+    color: $color-gray-4 !important;
+    font-family: $font-secondary;
+    margin-bottom: $increment-md;
 }

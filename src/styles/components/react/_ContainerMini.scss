@@ -1,0 +1,6 @@
+.ContainerMini{
+    width: 85rem;
+    @media screen and (max-width: $tablet){
+        max-width: 100%;
+    }
+}

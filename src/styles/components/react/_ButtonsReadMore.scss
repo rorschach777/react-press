@@ -1,0 +1,19 @@
+.ButtonReadMore{
+    @include button-base;
+    @include padding($increment-xxsm, $increment-xsm);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: $increment-md;
+    margin: 0 auto;
+    border: $color-1 solid .1rem;
+    max-width: 15rem;
+    color: $color-1;
+
+ 
+    &:hover{
+        @include hover;
+        background-color: $color-1;
+        color: $color-white; 
+    }
+}

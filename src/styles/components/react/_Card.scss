@@ -1,12 +1,11 @@
 .Card{
-    @include padding;
-    border-radius: .5rem;
+    @include card-base;
     border: solid 1px #ddd;
-    height: 400px;
     &--Dark{
         background-color: $color-dark;
         color: $color-white;
         h4, h5, h6 {
+            font-family: $font-secondary;
             color: $color-white !important;
         }
     }
@@ -22,6 +21,9 @@
             color: $color-white;
         }
         color: $color-dark;
+        .ButtonReadMore{
+            @include read-more-overwrite($color-white, $color-6);
+        }
     }
     &--Secondary {
         background-color: $color-5;
@@ -29,19 +31,22 @@
             color: $color-white;
         }
         color: $color-white;
+        .ButtonReadMore{
+            @include read-more-overwrite($color-white, $color-1);
+        }
     }
     &__double-sided{
-      
-        height: 400px;
+        @include card-base;
         position: relative;
-        border-radius: .5rem;
         transition: transform .8s ease;
         perspective: 150rem;
         -moz-perspective: 150rem;
-        @include padding;
-    
+      
+        h5 {
+            text-transform: uppercase;
+        }
         &__side{
-   
+        
            @include absolute;
            @include padding;
            transition: inherit;
@@ -50,6 +55,10 @@
            text-align: center;
            width: inherit;
            max-width: inherit;
+           & > .icon {
+            width: 5.5rem;
+           }
+       
            &--front{
               @include border($color-1);
               z-index: 2;
@@ -61,10 +70,7 @@
            }
         
         }
-        &:hover{
-           transform: scale(1.1);
-        }
-  
+    
         &:hover &__side--front{
            transform: rotateY(180deg);
            

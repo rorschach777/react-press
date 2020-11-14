@@ -6,10 +6,10 @@ const Footer = () => {
     return (
         <footer className="footer">
             <Container>
-                <Column width="1-of-2">
+                <Column modifier="1-of-2">
                   sdfs
                 </Column>
-                <Column width="1-of-2">
+                <Column modifier="1-of-2">
                   sdfs
                 </Column>
             </Container>

@@ -1,5 +1,12 @@
 .LoadingScreen{
     color: $color-white;
+    .logo-holder {
+        width: 38rem;
+        margin-bottom: $increment-md;
+        img{
+            max-width: 100%;
+        }
+    }
     & > div > {
         h1, h2, h3, h4, h5, h6 {
             color: $color-white !important;
