@@ -1,0 +1,19 @@
+form {
+    input {
+        @include padding($increment-xxsm);
+        border-radius: $increment-xxsm;
+        width: 100%;
+        margin: $increment-sm 0;
+    
+    }
+    button {
+
+        @include button-base;
+        @include padding($increment-xxsm);
+        float: left;
+        width: 15rem;
+        margin-top: $increment-sm;
+        border: none;
+        background-color: $color-1;
+    }
+}

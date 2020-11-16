@@ -103,6 +103,9 @@
     border-radius: .5rem;
     margin-bottom: $increment-md;
     align-items: inherit;
+    margin-block-start: 0px !important;
+
+   
 }
 
 @mixin read-more-overwrite($a : $color-white, $b: $color-1){

@@ -7,6 +7,7 @@ const Card = (props) => {
             <h5>{props.subHeadline}</h5>
             <p>{props.bodyText}</p>
             {props.enableButton ? <ButtonReadMore text={props.buttonText} url={props.buttonURL}/> : null }
+            {props.children}
         </div>
     );
 };

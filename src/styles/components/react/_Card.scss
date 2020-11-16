@@ -1,6 +1,6 @@
 .Card{
     @include card-base;
-    border: solid 1px #ddd;
+    
     &--Dark{
         background-color: $color-dark;
         color: $color-white;
