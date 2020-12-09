@@ -16,6 +16,8 @@ const ThreeColumnEvenSection = (props) => {
             case "card_basic" : {
                 return (
                     <Card
+                        enableIcon={m.enable_icon}
+                        iconURL={m.icon_url}
                         modifier={m.scheme}
                         headline={m.headline}
                         subHeadline={m.sub_headline}
@@ -24,7 +26,6 @@ const ThreeColumnEvenSection = (props) => {
                         buttonText={m.button_text}
                         buttonURL={m.button_url}
                         height={m.height}
-                    
                     />
                 )
             }
@@ -42,7 +43,7 @@ const ThreeColumnEvenSection = (props) => {
                         backModifier={m.back_scheme}
                         bodyText={m.body_text}
                         height={m.height}
-                        buttonEnabled={m.button_enabled}
+                        buttonEnabled={m.enable_button}
                         buttonText={m.button_text}
                         buttonURL={m.button_url}
                     />

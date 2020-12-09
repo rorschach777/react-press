@@ -6,6 +6,7 @@ import Hero from '../../components/Hero';
 import { NavLink } from 'react-router-dom';
 import HalfColumnSection from '../Sections/HalfColumnSection';
 import ThreeColumnSection from '../Sections/ThreeColumnSection';
+import FourColumnSection from '../Sections/FourColumnSection';
 import FullWidthSection from '../Sections/FullWidthSection';
 import * as stringResources from '../../string-resources/string-resources';
 import Meta from '../Meta';
@@ -47,7 +48,16 @@ const LayoutMain = (props) => {
                 />
             );
             break;
-            // FULL WIDTH Section
+            // FOUR COLUMN SECTION
+            case stringResources.fourColumnSection : 
+            return (
+                <FourColumnSection
+                    setComponentData={props.setComponentData}
+                    modifier={'even'}
+                />
+            );
+            break;
+            // FULL WIDTH SECTION
             case stringResources.fullWidthSection : 
             return (
                 <FullWidthSection
@@ -60,7 +70,6 @@ const LayoutMain = (props) => {
     }
     return (
         <Aux>
-          
             <Header 
             menuPrimary={props.state.data.menuPrimary}
             setCurrentRoute={props.setCurrentRoute}

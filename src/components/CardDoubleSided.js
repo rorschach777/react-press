@@ -12,7 +12,7 @@ const CardDoubleSided = (props) => {
             <div className={`Card__double-sided__side Card__double-sided__side--back Card--${props.backModifier}`}>
                 <h5>{props.backHeadline}</h5>
                 <h6>{props.backSubHeadline}</h6>
-                {props.buttonEnabled? <ButtonReadMore text={props.buttonText} url={props.buttonURL}/> : null }
+                {props.buttonEnabled ? <ButtonReadMore text={props.buttonText} url={props.buttonURL}/> : null }
             </div>
         </div>
     );

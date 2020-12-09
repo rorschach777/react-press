@@ -8,21 +8,22 @@
         @media only screen and (max-width: $tablet){
             width: 100%;
         }
-        // background-color: $color-ios-pink;
+
     }
     &--1-of-3{
         width: calc((100% - (#{$gutter-horizontal} * 2)) / 3);
     }
-    &---2-of-3{
+    &--2-of-3{
         width: calc((((100% - calc(#{$gutter-horizontal}) * 2) / 3)) * 2 + #{$gutter-horizontal});
     }
-    &---1-of-4{
-        width: calc((100% - calc(#{$gutter-horizontal * 3})) / 4)
+    &--1-of-4{
+        width: calc((100% - calc(#{$gutter-horizontal * 3})) / 4);
+
     }
-    &---3-of-4{
+    &--3-of-4{
         width: calc((((100% - #{$gutter-horizontal * 3}) / 4) * 3) + calc(#{$gutter-horizontal} * 2)); 
     }
-    &---2-of-4{
+    &--2-of-4{
         width: calc((((100% - #{$gutter-horizontal * 3}) / 4) * 2) + calc(#{$gutter-horizontal} * 1)); 
     }
 }

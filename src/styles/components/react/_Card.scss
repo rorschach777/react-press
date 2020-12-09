@@ -1,6 +1,8 @@
 .Card{
     @include card-base;
-    
+    & > .icon {
+        width: 5.5rem;
+    }
     &--Dark{
         background-color: $color-dark;
         color: $color-white;
@@ -11,16 +13,20 @@
     }
     &--Light {
         background-color: $color-white;
+        border: $color-gray-2 .1rem solid;
         h4 {
             color: $color-1;
         }
+        
     }
     &--Primary {
         background-color: $color-1;
         h4, h5, h6 {
             color: $color-white;
         }
-        color: $color-dark;
+        p {
+            color: $color-dark;
+        }
         .ButtonReadMore{
             @include read-more-overwrite($color-white, $color-6);
         }
